@@ -20,8 +20,13 @@ int main(void)
         curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &internal_struct);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, binaryptr);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, 23L);
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_perform(curl); /* post away! */
+        curl_slist_free_all(headers); /* free the header list */
+ struct curl_slist *headers=NULL; /* init to NULL is important */
 
-   
         header = curl_slist_append(header, "Content-Type: application/x-www-form-urlencoded");   
         header = curl_slist_append(header, "x-source-code: test");
         header = curl_slist_append(header, "x-client-id: test");
@@ -29,28 +34,11 @@ int main(void)
  CURLcode curl_easy_setopt(CURL *handle, CURLOPT_VERBOSE, long onoff);
  CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERPWD, char *userpwd);
   struct curl_slist *headers=NULL;
- headers = curl_slist_append(headers, "Content-Type: text/xml");
- 
- /* post binary data */
- curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDS, binaryptr);
- 
- /* set the size of the postfields data */
- curl_easy_setopt(easyhandle, CURLOPT_POSTFIELDSIZE, 23L);
- 
- /* pass our list of custom made headers */
- curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);
- 
- curl_easy_perform(easyhandle); /* post away! */
- 
- curl_slist_free_all(headers); /* free the header list */
- struct curl_slist *headers=NULL; /* init to NULL is important */
- 
+ headers = curl_slist_append(headers, "Content-Type: text/xml"); 
  headers = curl_slist_append(headers, "Hey-server-hey: how are you?");
  headers = curl_slist_append(headers, "X-silly-content: yes");
  
  /* pass our list of custom made headers */
- curl_easy_setopt(easyhandle, CURLOPT_HTTPHEADER, headers);
- 
  curl_easy_perform(easyhandle); /* transfer http */
  
  curl_slist_free_all(headers); /* free the header list */
