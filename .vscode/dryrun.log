@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/sobomighie/Documents/repos/assessment'
+`curl-config --cc` -g -c mycurlapp.c
+`curl-config --cc` -g -o mycurlapp mycurlapp.o `curl-config --libs`
+make: Leaving directory '/home/sobomighie/Documents/repos/assessment'
+ 
