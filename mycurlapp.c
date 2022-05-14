@@ -7,7 +7,6 @@ int main(void)
     CURLcode res;
     struct Curl_slist *header = NULL;
     
-    curl_easy_perform(curl); /* post away! */
     // curl_slist_free_all(header); /* free the header list */
     curl_global_init(CURL_GLOBAL_ALL);
       size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp);
@@ -33,7 +32,9 @@ int main(void)
     // CURLcode curl_easy_setopt(CURL *handle, CURLOPT_VERBOSE, long onoff);
     // CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERPWD, char *userpwd);
 
-   
+   // You need to call curl_easy_perform(curl) AFTER all the curl_easy_init() and curl_easy_setopt() calls,
+   // and capture the result in the res variable (result) so you can check whether it succeded or not.
+   res = curl_easy_perform(curl);
    if(res != CURLE_OK)
     fprintf(stderr, "curl_easy_perform() returned %s\n",
             curl_easy_strerror(res ));
