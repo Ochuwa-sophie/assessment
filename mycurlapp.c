@@ -3,16 +3,16 @@
 
 int main(void)
 {
+    
     CURL *curl;
     CURLcode res;
     struct Curl_slist *header = NULL;
-    
-    curl_easy_perform(curl); /* post away! */
+    curl = curl_easy_init();
+
     // curl_slist_free_all(header); /* free the header list */
     curl_global_init(CURL_GLOBAL_ALL);
       size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp);
 
-   curl = curl_easy_init();
    if (curl) {
         curl_easy_setopt(curl, CURLOPT_URL, "https://accelerexportal.app:8084/anp/api/v3/linuxpostest/login");
         curl_easy_setopt(curl, CURLOPT_POST, 1L);
@@ -33,7 +33,8 @@ int main(void)
     // CURLcode curl_easy_setopt(CURL *handle, CURLOPT_VERBOSE, long onoff);
     // CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERPWD, char *userpwd);
 
-   
+res = curl_easy_perform(curl); /* post away! */
+
    if(res != CURLE_OK)
     fprintf(stderr, "curl_easy_perform() returned %s\n",
             curl_easy_strerror(res ));

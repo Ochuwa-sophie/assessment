@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 12 19:55:52 2022
+# Make data base, printed on Mon May 16 13:13:44 2022
 
 # Variables
 
@@ -49,7 +51,7 @@ SNAP_DATA = /var/snap/code/96
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:48938
+JOURNAL_STREAM = 8:52508
 # environment
 TEAMSFX_YO_ENV_CHECKER_ENABLE = true
 # environment
@@ -75,7 +77,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/96/usr/share/code/code
 # environment
-MANAGERPID = 1697
+MANAGERPID = 1756
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +91,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/sobomighie-HP-Pavilion-15-Notebook-PC:@/tmp/.ICE-unix/1931,unix/sobomighie-HP-Pavilion-15-Notebook-PC:/tmp/.ICE-unix/1931
+SESSION_MANAGER = local/sobomighie-HP-Pavilion-15-Notebook-PC:@/tmp/.ICE-unix/1987,unix/sobomighie-HP-Pavilion-15-Notebook-PC:/tmp/.ICE-unix/1987
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -107,7 +109,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = c3e77442560a4847935cdcac1d9806c1
+INVOCATION_ID = 64c8f96c26db4fa3954c6d548c691a8d
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -119,7 +121,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2353
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2627
 # automatic
 %F = $(notdir $%)
 # environment
@@ -135,7 +137,7 @@ PWD = /home/sobomighie/Documents/repos/assessment
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1896
+SSH_AGENT_PID = 1952
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -187,7 +189,7 @@ CC = `curl-config --cc`
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-73ea5e2d-a78d-42ed-a122-beaa1389d932.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-71b42e20-c361-4d21-b87c-b996e9ab41b5.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -261,7 +263,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 TEAMSFX_ROOT_DIRECTORY = ${homeDir}/TeamsApps
 # environment
-VSCODE_PID = 2418
+VSCODE_PID = 2817
 # environment
 LANG = C
 # variable set hash-table stats:
@@ -273,14 +275,11 @@ LANG = C
 
 # Directories
 
-# . (device 2050, inode 17833487): 7 files, no impossibilities.
+# . (device 2050, inode 17833487): 10 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
-
- 
-make: *** No rule to make target 'all'.  Stop.
 
 # No implicit rules.
 
@@ -290,6 +289,7 @@ make: *** No rule to make target 'all'.  Stop.
 all:
 #  Command line target.
 #  Implicit rule search has been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -341,12 +341,12 @@ mycurlapp.c:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 13 / storage = 117 B / avg = 9 B
-# current buf: size = 8162 B / used = 117 B / count = 13 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 144 B / avg = 9 B
+# current buf: size = 8162 B / used = 144 B / count = 16 / avg = 9 B
 
-# strcache performance: lookups = 24 / hit rate = 45%
+# strcache performance: lookups = 27 / hit rate = 40%
 # hash-table stats:
-# Load=13/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Thu May 12 19:55:52 2022
+# Load=16/8192=0%, Rehash=0, Collisions=1/27=4%
+# Finished Make data base on Mon May 16 13:13:45 2022
 
  
